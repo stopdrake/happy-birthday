@@ -2,6 +2,7 @@
 const fetchData = () => {
   node.style.display = "none"
   var audio = new Audio('audio/happy_birthday.wav');
+  audio.loop = true;
   audio.play()
   fetch("customize.json")
     .then(data => data.json())
