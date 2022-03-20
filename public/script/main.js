@@ -1,5 +1,8 @@
 // Import the data to customize and insert them into page
 const fetchData = () => {
+  node.style.display = "none"
+  var audio = new Audio('audio/happy_birthday.wav');
+  audio.play()
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
@@ -301,6 +304,6 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
-
+const node = document.getElementById("click_me")
+node.addEventListener("click", fetchData)
 // Run fetch and animation in sequence
-fetchData();
